@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GameThings">
+      <UniqueIdentifier>{137d25bf-a6ae-41f5-83bd-11ed99243821}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings">
+      <UniqueIdentifier>{0f41b771-7e5a-496b-8be1-1efec4dfc8bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base">
+      <UniqueIdentifier>{69a108c0-88ca-40b4-98e7-a3d70c925eb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base">
+      <UniqueIdentifier>{f85de164-eeb0-4ee1-bab9-972e69e1b334}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Mobs">
+      <UniqueIdentifier>{6d5b289a-b482-4b6b-90dc-839ea39c2605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Mobs\Enemies">
+      <UniqueIdentifier>{83eb1edf-eaf9-48e9-9eb4-4e0aa8540b17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Mobs\Player">
+      <UniqueIdentifier>{618f3e63-3e96-4b41-bbb0-45a7807833dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Mobs\Player\TypePlayerControler">
+      <UniqueIdentifier>{e32d98c0-1aeb-4fd0-9a3f-8501705d2fe3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Puntuacion">
+      <UniqueIdentifier>{b7655c4e-e803-4e3b-a340-2f4d0426a099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Scenes">
+      <UniqueIdentifier>{b5f2fcf6-73c5-40c3-9dbc-340f47168420}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Scenes\SceneDirector">
+      <UniqueIdentifier>{e1fde9b9-e374-4727-81fa-9842ef315201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Scenes\OtherScenes">
+      <UniqueIdentifier>{2fbf907d-fdcf-4221-8e95-0f3cb290587d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine">
+      <UniqueIdentifier>{f21e223b-412a-44b2-ae80-aefd70300e89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\Singletones">
+      <UniqueIdentifier>{c233460f-a6f3-42ab-a055-5f9953cd72be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Engine\CargadorImagenes">
+      <UniqueIdentifier>{728ff4b1-4ac8-4083-a949-de93c6c46d6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine">
+      <UniqueIdentifier>{e2f9a6d2-35e1-486d-be1b-ac3e17ce51fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\CargadorImages">
+      <UniqueIdentifier>{343a3e12-2b2d-402a-a8e5-3b83ca2779c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine\Singletons">
+      <UniqueIdentifier>{93aeed9c-8d8d-4ab6-8f87-11da8139953f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Scenes">
+      <UniqueIdentifier>{b9187ea9-1a30-4358-a743-9f448fff80c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Scenes\SceneDirector">
+      <UniqueIdentifier>{07a818e0-fdd0-4f0f-99ae-fa91affd5a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{38762493-286d-4b49-bba0-6f9db462f1c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Mobs">
+      <UniqueIdentifier>{ed93fbf4-e72c-4d14-85cd-a43ebec1e4c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Mobs\Enemy">
+      <UniqueIdentifier>{85953d6c-e96d-4828-92df-58266b7c6e2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Mobs\Player">
+      <UniqueIdentifier>{f80ee750-3d5d-4ec3-9a4f-fc996c212239}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Mobs\Player\TypePlayerControler">
+      <UniqueIdentifier>{beca318d-128b-4a3f-8273-8011112a3bb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Puntuacion">
+      <UniqueIdentifier>{3c9e8a5a-7082-4761-9ae6-4a6f2c62c67f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Scenes\OtherScenes">
+      <UniqueIdentifier>{dc75125d-49dc-4b7f-9aee-93901a3e8b51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Mobs\Player\PlayerType">
+      <UniqueIdentifier>{9bb7ffae-84cf-4777-837a-746a46bf38d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Mobs\Player\PlayerType">
+      <UniqueIdentifier>{49c90fe0-9c3b-45bc-bf49-04fe8c0460ab}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Inputs.cpp">
+      <Filter>Source Files\Engine\Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="Sound.cpp">
+      <Filter>Source Files\Engine\Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="Videos.cpp">
+      <Filter>Source Files\Engine\Singletons</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files\Engine\CargadorImages</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneDirector.cpp">
+      <Filter>Source Files\GameThings\Base\Scenes\SceneDirector</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\GameThings\Base\Scenes\SceneDirector</Filter>
+    </ClCompile>
+    <ClCompile Include="MainScene.cpp">
+      <Filter>Source Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionsScene.cpp">
+      <Filter>Source Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Save_Load.cpp">
+      <Filter>Source Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="intro.cpp">
+      <Filter>Source Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="GameOver.cpp">
+      <Filter>Source Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerSelector.cpp">
+      <Filter>Source Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Characters.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs</Filter>
+    </ClCompile>
+    <ClCompile Include="TypePlayerControler.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs\Player\TypePlayerControler</Filter>
+    </ClCompile>
+    <ClCompile Include="Elfo.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
+    </ClCompile>
+    <ClCompile Include="Gerrero.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
+    </ClCompile>
+    <ClCompile Include="Mago.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
+    </ClCompile>
+    <ClCompile Include="Valquiria.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Includes.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Defines.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inputs.h">
+      <Filter>Header Files\Engine\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="Videos.h">
+      <Filter>Header Files\Engine\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="Sound.h">
+      <Filter>Header Files\Engine\Singletones</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files\Engine\CargadorImagenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneDirector.h">
+      <Filter>Header Files\GameThings\Base\Scenes\SceneDirector</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files\GameThings\Base\Scenes\SceneDirector</Filter>
+    </ClInclude>
+    <ClInclude Include="MainScene.h">
+      <Filter>Header Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsScene.h">
+      <Filter>Header Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Save_Load.h">
+      <Filter>Header Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClInclude>
+    <ClInclude Include="intro.h">
+      <Filter>Header Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameOver.h">
+      <Filter>Header Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerSelector.h">
+      <Filter>Header Files\GameThings\Base\Scenes\OtherScenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Characters.h">
+      <Filter>Header Files\GameThings\Base\Mobs</Filter>
+    </ClInclude>
+    <ClInclude Include="TypePlayerControler.h">
+      <Filter>Header Files\GameThings\Base\Mobs\Player\TypePlayerControler</Filter>
+    </ClInclude>
+    <ClInclude Include="Elfo.h">
+      <Filter>Header Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
+    </ClInclude>
+    <ClInclude Include="Gerrero.h">
+      <Filter>Header Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
+    </ClInclude>
+    <ClInclude Include="Mago.h">
+      <Filter>Header Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
+    </ClInclude>
+    <ClInclude Include="Valquiria.h">
+      <Filter>Header Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>
