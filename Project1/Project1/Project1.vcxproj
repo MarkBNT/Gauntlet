@@ -74,8 +74,8 @@
     <LibraryPath>H:\NUEVA VARPETA SEGUNDO\Mygame\Visual\Visual\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>H:\NUEVA VARPETA SEGUNDO\Mygame\Visual\Visual\include;$(IncludePath)</IncludePath>
-    <LibraryPath>H:\NUEVA VARPETA SEGUNDO\Mygame\Visual\Visual\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\lib\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
