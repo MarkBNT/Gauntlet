@@ -16,6 +16,10 @@ public:
 	bool left(); 
 	bool right(); 
 	bool qKey(); 
+	bool wKey(); 
+	bool aKey(); 
+	bool sKey(); 
+	bool dKey(); 
 
 	
 

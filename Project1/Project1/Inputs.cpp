@@ -198,6 +198,26 @@ bool Inputs::qKey()
 	return teclas[12];
 }
 
+bool Inputs::wKey()
+{
+	return teclas[0];
+}
+
+bool Inputs::aKey()
+{
+	return teclas[1];
+}
+
+bool Inputs::sKey()
+{
+	return teclas[2];
+}
+
+bool Inputs::dKey()
+{
+	return teclas[3];
+}
+
 
 bool Inputs::meVoy()
 {

@@ -21,21 +21,56 @@ void Game::update()
 	if (firstRender == true)
 	{
 		Player = TypePlayerControler::getInstance()->getPlayer();
+		TypePlayerControler::getInstance()->setPlayer(Player);
+		firstRender = false;
+		
 	}
-	TypePlayerControler::getInstance()->updatePlayer(VALQUIRIA); 
-	//std::cout << "Estamos Jugando" << std::endl;
+	if (Player == 0)
+	{
+
+		TypePlayerControler::getInstance()->updatePlayer(GERRERO); 
+		
+	}
+	if (Player == 1)
+	{
+
+		TypePlayerControler::getInstance()->updatePlayer(VALQUIRIA); 
+	}
+	if (Player == 2)
+	{
+		TypePlayerControler::getInstance()->updatePlayer(MAGO);
+	}
+	if (Player == 3)
+	{
+		TypePlayerControler::getInstance()->updatePlayer(ELFO);
+	}
+
+	
 }
 
 void Game::render()
 {
-	if (firstRender == true)
+	
+	if (Player == 0)
 	{
-		 
-		Videos::getInstance()->clearWindow();
-		Videos::getInstance()->Draw("./Graphics/Sinior.png", 200, 100, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 7);
-		firstRender = false; 
-		Videos::getInstance()->update(); 
+
+		TypePlayerControler::getInstance()->updatePlayer(GERRERO);
 	}
-	TypePlayerControler::getInstance()->renderPlayer(VALQUIRIA);
+	if (Player == 1)
+	{
+
+		TypePlayerControler::getInstance()->updatePlayer(VALQUIRIA);
+	}
+	if (Player == 2)
+	{
+		TypePlayerControler::getInstance()->updatePlayer(MAGO);
+	}
+	if (Player == 3)
+	{
+		TypePlayerControler::getInstance()->updatePlayer(ELFO);
+	}
+}
+void Game::PrimeraVez()
+{
 }
 

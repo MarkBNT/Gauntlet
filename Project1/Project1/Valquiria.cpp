@@ -25,7 +25,7 @@ void Valquiria::render()
 {
 	Videos::getInstance()->clearWindow(); 
 
-	moove(20,20,0,1); 
+	moove(20,20,0,0); 
 
 	Videos::getInstance()->update(); 
 }
