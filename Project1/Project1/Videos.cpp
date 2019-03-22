@@ -139,7 +139,9 @@ void Videos::drawPlayer(const char * path, int x, int y, int _posX, int _posY)
 	destination.y = y;
 
 	src->x = _posX; 
-	src->y = _posY; 
+	src->y = _posY;
+	src->h = CUTX;
+	src->w = CUTY;
 
 	SDL_Texture * LoadedTexure = Gestor->getTextureByID(Gestor->getTextureId(path));
 	SDL_RenderCopy(renderer, LoadedTexure, src, &destination); 

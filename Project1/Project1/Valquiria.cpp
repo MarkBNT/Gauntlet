@@ -13,5 +13,18 @@ Valquiria::~Valquiria()
 
 void Valquiria::init()
 {
-	std::cout << "SOy una valquiria \n"; 
+	std::cout << "Soy una valquiria \n"; 
+}
+
+void Valquiria::update()
+{
+	moove(20,20,20,20); 
+
+}
+
+void Valquiria::render()
+{
+	Videos::getInstance()->clearWindow(); 
+
+	Videos::getInstance()->update(); 
 }
