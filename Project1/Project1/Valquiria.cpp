@@ -18,13 +18,14 @@ void Valquiria::init()
 
 void Valquiria::update()
 {
-	moove(20,20,20,20); 
 
 }
 
 void Valquiria::render()
 {
 	Videos::getInstance()->clearWindow(); 
+
+	moove(20,20,0,1); 
 
 	Videos::getInstance()->update(); 
 }

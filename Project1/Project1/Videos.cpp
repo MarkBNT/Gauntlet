@@ -117,6 +117,7 @@ void Videos::Draw(const char * path, int w, int h, int x, int y)
 	destination.x = x;
 	destination.y = y;
 
+	
 
 
 
@@ -138,13 +139,19 @@ void Videos::drawPlayer(const char * path, int x, int y, int _posX, int _posY)
 	destination.x = x;
 	destination.y = y;
 
-	src->x = _posX; 
-	src->y = _posY;
-	src->h = CUTX;
-	src->w = CUTY;
+	SDL_Rect Cuter; 
+	Cuter.h = CUTY + MARGEN; 
+	Cuter.w = CUTX + MARGEN; 
+	Cuter.x = _posX; 
+	Cuter.y = _posY;
+
+	/*src.x = _posX; 
+	src.y = _posY;
+	src.h = CUTX;
+	src.w = CUTY;*/
 
 	SDL_Texture * LoadedTexure = Gestor->getTextureByID(Gestor->getTextureId(path));
-	SDL_RenderCopy(renderer, LoadedTexure, src, &destination); 
+	SDL_RenderCopy(renderer, LoadedTexure, &Cuter, &destination); 
 
 }
 

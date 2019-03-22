@@ -12,7 +12,7 @@ private:
 	SDL_Window* window;
 	SDL_Renderer * renderer;
 	SDL_Rect *destination;
-	SDL_Rect *src;
+	SDL_Rect * src;
 	void setImages(); // cargara todas las imagenes 
 
 public:
