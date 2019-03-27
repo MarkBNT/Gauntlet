@@ -4,6 +4,8 @@
 
 Characters::Characters()
 {
+	x = 0;
+	y = 0; 
 }
 
 
@@ -21,6 +23,7 @@ void Characters::update()
 
 void Characters::render()
 {
+	moove(x, y, 0, 0);
 }
 
 void Characters::moove(int _x, int _y, int graphicX, int graphicY)

@@ -50,25 +50,26 @@ void Game::update()
 
 void Game::render()
 {
-	
+	Videos::getInstance()->clearWindow();
 	if (Player == 0)
 	{
 
-		TypePlayerControler::getInstance()->updatePlayer(GERRERO);
+		TypePlayerControler::getInstance()->renderPlayer(GERRERO);
 	}
 	if (Player == 1)
 	{
 
-		TypePlayerControler::getInstance()->updatePlayer(VALQUIRIA);
+		TypePlayerControler::getInstance()->renderPlayer(VALQUIRIA);
 	}
 	if (Player == 2)
 	{
-		TypePlayerControler::getInstance()->updatePlayer(MAGO);
+		TypePlayerControler::getInstance()->renderPlayer(MAGO);
 	}
 	if (Player == 3)
 	{
-		TypePlayerControler::getInstance()->updatePlayer(ELFO);
+		TypePlayerControler::getInstance()->renderPlayer(ELFO);
 	}
+	
 }
 void Game::PrimeraVez()
 {
