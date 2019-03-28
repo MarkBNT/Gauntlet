@@ -30,9 +30,7 @@ private:
 	std::vector<SDL_Texture*> _vectorDeTexturas;
 	
 	Uint32	mFirstFreeSlot;
-	
-	/*SDL_Window* window;
-	SDL_Renderer * render;/*/
+
 
 	float _posX, _posY; 
 

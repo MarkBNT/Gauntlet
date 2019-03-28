@@ -1,11 +1,18 @@
 #include "Characters.h"
 
 #include "Video.h"
+#include "Inputs.h"
 
 Characters::Characters()
 {
-	x = 0;
-	y = 0; 
+	x = SCREEN_WIDTH / 2;
+	y = SCREEN_HEIGHT/2; 
+	graficox = 0; 
+	speed = 6;
+	up = false; 
+	down = false; 
+	left = false; 
+	right = false;
 }
 
 
@@ -19,29 +26,82 @@ void Characters::init()
 
 void Characters::update()
 {
+
+	   	 
+	if ((Inputs::getInstance()->wKey() == true) || (Inputs::getInstance()->up() == true))
+	{
+		y-= speed; 
+		if (y < 0)
+		{
+			y = 0;
+		}
+		up = true; 
+	}
+	else
+	{
+		up = false;
+	}
+	if ((Inputs::getInstance()->sKey() == true)||(Inputs::getInstance()->down() == true))
+	{
+		y += speed; 
+		if (y >( SCREEN_HEIGHT - CUTY))
+		{
+			y = SCREEN_HEIGHT - CUTY;
+		}
+		down = true; 
+	}
+	else
+	{
+		down = false;
+	}
+	if ((Inputs::getInstance()->aKey() == true)||(Inputs::getInstance()->left() == true))
+	{ 
+		x -= speed;
+		if (x < 0)
+		{
+			x = 0; 
+		}
+		left = true;
+
+	}
+	else
+	{
+		left = false;
+	}
+	if ((Inputs::getInstance()->dKey() == true)||(Inputs::getInstance()->right() == true))
+	{
+		x += speed; 
+		if (x > (SCREEN_WIDTH  - CUTX))
+		{
+			x = SCREEN_WIDTH - CUTX;
+		}
+		right = true; 
+	}
+	else
+	{
+		right = false; 
+	}
+	setCharacterX();
+	
+	player = TypePlayerControler::getInstance()->getPlayer();
 }
 
 void Characters::render()
 {
-	moove(x, y, 0, 0);
+	setCharacterY(player);
+	moove();
 }
 
-void Characters::moove(int _x, int _y, int graphicX, int graphicY)
+void Characters::moove()
 {
 	
-	Videos::getInstance()->drawPlayer("./Graphics/entities.png", _x, _y, graphicX, graficoy);
+	Videos::getInstance()->drawPlayer("./Graphics/entities.png", x, y, graficox, graficoy);
 
 
 }
 
-//void Characters::setVariables(int graphicX, int graphicY)
-//{
-//	graficox = graphicX; 
-//	graficoy = graphicY; 
-//
-//}
 
-void Characters::setCharacter(int Personaje)
+void Characters::setCharacterY(int Personaje)
 {
 	if (Personaje == 0 )
 	{
@@ -59,6 +119,12 @@ void Characters::setCharacter(int Personaje)
 	{
 		graficoy = 87; 
 	}
+}
+
+void Characters::setCharacterX()
+{
+	// situar las posiciones de los players
+
 }
 
 

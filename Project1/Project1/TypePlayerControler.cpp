@@ -40,6 +40,7 @@ TypePlayerControler * TypePlayerControler::getInstance()
 void TypePlayerControler::setPlayer(int plyer)
 {
 
+	player = plyer; 
 	Characters::setCharacter(plyer);
 
 

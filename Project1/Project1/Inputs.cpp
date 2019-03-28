@@ -13,7 +13,7 @@ Inputs::Inputs()
 	teclas.push_back(S);//2
 	teclas.push_back(D);//3
 	teclas.push_back(I);//4
-	teclas.push_back(SpaceKey);//5
+	teclas.push_back(M);//5
 	teclas.push_back(R);//6
 	teclas.push_back(downKey);//7
 	teclas.push_back(upKey);//8
@@ -49,128 +49,80 @@ void Inputs::capturaTeclas()
 	while (SDL_PollEvent(&capt_teclas))
 	{
 
-		switch (capt_teclas.type)
-		{
-
-		case SDL_KEYDOWN:
-				capt_teclas.key.keysym.scancode;
-
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_ESCAPE)
+			
+			const Uint8 * state = SDL_GetKeyboardState(NULL);
+			if (state[SDL_SCANCODE_ESCAPE])
 			{
 				changeRip();
 			}
-
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_W)
-			{
-				std::cout << "Has Pulsado W" << std::endl;
-
-				cambiaEstado(0, true);
-								
-			}
-
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_A)
-			{
-				std::cout << "Has pulsado A" << std::endl;
-
-				cambiaEstado(1, true);
-			}
-
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_S)
-			{
-				std::cout << "Has Pulsado S" << std::endl;
-
-				cambiaEstado(2, true);
-			}
-
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_D)
-			{
-				std::cout << "Has Pulsado D" << std::endl;
-
-				cambiaEstado(3, true);
-			}	
-
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_I)
-			{
-				std::cout << "Estas pulsando I" << std::endl; 
-
-				cambiaEstado(4, true);
-			}
-
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_SPACE)
-			{
-				std::cout << "Estas pulsando Space" << std::endl;
-
-				cambiaEstado(5, true);
-			}
-
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_R)
-			{
-				std::cout << "Estas pulsando R" << "\n";
-
-				cambiaEstado(6, true);
-			}			
-			
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_P)
-			{
-				
-
-			}
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_DOWN)
-			{
-				cambiaEstado(7, true); 
-			}
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_UP)
-			{
-				cambiaEstado(8, true); 
-			}
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_SPACE)
+			if (state[SDL_SCANCODE_SPACE])
 			{
 				cambiaEstado(9, true);
-				//ripKey = true;
 			}
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_RIGHT)
+			if (state[SDL_SCANCODE_W])
 			{
-				cambiaEstado(10, true);
+				cambiaEstado(0, true);
 			}
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_LEFT)
+			if (state[SDL_SCANCODE_A])
 			{
-				cambiaEstado(11, true); 
+				cambiaEstado(1, true);
 			}
-			if (capt_teclas.key.keysym.scancode == SDL_SCANCODE_Q)
+			if (state[SDL_SCANCODE_S])
 			{
-				cambiaEstado(12, true); 
+				cambiaEstado(2, true);
+			}
+			if (state[SDL_SCANCODE_D])
+			{
+				cambiaEstado(3, true);
+			}
+			if (state[SDL_SCANCODE_DOWN])
+			{
+				cambiaEstado(7, true);
+			}
+			if (state[SDL_SCANCODE_UP])
+			{
+				cambiaEstado(8, true);
+			}
+			if (state[SDL_SCANCODE_RIGHT])
+			{
+				cambiaEstado(10, true); 
+			}
+			if (state[SDL_SCANCODE_LEFT])
+			{
+				cambiaEstado(11, true);
+			}
+			if (state[SDL_SCANCODE_Q])
+			{
+				cambiaEstado(12, true);
 			}
 
-		break;
-			   	
 
+		switch (capt_teclas.type)
+		{
 		case SDL_QUIT:
 						
-			ripKey = true;
+			changeRip();
 
 		break;
 		}
-
 	}
-
+	
 }
 
 void Inputs::cambiaEstado(int estado , bool cambia)
 {
 	bool exit = false;
 	int i = 0;
-	while (exit == false)
+	for (int i = 0; i < teclas.size(); i++)
 	{
 		if (estado == i)
 		{
 			teclas[i] = cambia;
-			exit = true;
-			
-		}
-		
-		i+=1;
-	}
+			//exit = true;
 
+		}
+	}
+	
 }
 
 

@@ -8,7 +8,6 @@ public:
 	Valquiria();
 	~Valquiria();
 	void init();
-	void update(); 
-	void render(); 
+	
 };
 

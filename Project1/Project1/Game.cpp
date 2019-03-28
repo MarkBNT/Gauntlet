@@ -3,6 +3,8 @@ TypePlayerControler * Player = TypePlayerControler::getInstance();
 
 Game::Game()
 {
+
+	Player = 0; 
 }
 
 
@@ -23,6 +25,8 @@ void Game::update()
 		Player = TypePlayerControler::getInstance()->getPlayer();
 		TypePlayerControler::getInstance()->setPlayer(Player);
 		firstRender = false;
+
+
 		
 	}
 	if (Player == 0)
@@ -50,6 +54,7 @@ void Game::update()
 
 void Game::render()
 {
+
 	Videos::getInstance()->clearWindow();
 	if (Player == 0)
 	{
@@ -70,6 +75,7 @@ void Game::render()
 		TypePlayerControler::getInstance()->renderPlayer(ELFO);
 	}
 	
+	Videos::getInstance()->update(); 
 }
 void Game::PrimeraVez()
 {
