@@ -41,7 +41,7 @@ void TypePlayerControler::setPlayer(int plyer)
 {
 
 	player = plyer; 
-	Characters::setCharacter(plyer);
+	Characters::setCharacterY(plyer);
 
 
 }

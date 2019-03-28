@@ -10,6 +10,7 @@ public:
 	virtual void render(); 
 	virtual void moove();
 	virtual void setCharacterY(int Personaje); 
+	virtual void setCharacterX(); 
 
 private: 
 	int x, y , graficox , graficoy,player ,speed; 

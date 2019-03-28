@@ -1,7 +1,8 @@
 #include "Characters.h"
 
-#include "Video.h"
+//#include "Videos.h"
 #include "Inputs.h"
+#include "Defines.h"
 
 Characters::Characters()
 {
