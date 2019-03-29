@@ -110,20 +110,38 @@ void Characters::setCharacterY(int Personaje)
 	}
 	else if (Personaje == 1)
 	{
-		graficoy = 29;
+		graficoy = 29 + MARGEN;
 	}
 	else if (Personaje == 2)
 	{
-		graficoy = 58;
+		graficoy = 58 + MARGEN;
 	} 
 	else
 	{
-		graficoy = 87; 
+		graficoy = 87 + MARGEN;
 	}
 }
 
 void Characters::setCharacterX()
 {
+	if (up == true)
+	{
+		graficox = 0;
+
+	if (right == true)
+	{
+		graficox = (2 * (CUTX + MARGEN));
+	}
+	}
+	if (down == true)
+	{
+		graficox = (4* (CUTX + MARGEN));
+	}
+	if (left == true)
+	{
+		graficox = (6 * (CUTX + MARGEN));
+	}
+
 	// situar las posiciones de los players
 
 }

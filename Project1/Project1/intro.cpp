@@ -14,6 +14,7 @@ intro::~intro()
 void intro::init()
 {
 	std::cout << "Esta es la Intro del Juego"; 
+	Sound::getInstance()->loadMusic(0, 0);
 }
 
 void intro::update()
@@ -22,7 +23,6 @@ void intro::update()
 
 void intro::render()
 {
-	Sound::getInstance()->loadMusic(0, -1);
 
 	Videos::getInstance()->clearWindow();
 	Videos::getInstance()->Draw("./Graphics/Gauntlet.png", SCREEN_WIDTH,SCREEN_HEIGHT, 0, 0);
