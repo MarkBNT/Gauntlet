@@ -124,22 +124,42 @@ void Characters::setCharacterY(int Personaje)
 
 void Characters::setCharacterX()
 {
+	
 	if (up == true)
 	{
 		graficox = 0;
 
-	if (right == true)
-	{
-		graficox = (2 * (CUTX + MARGEN));
+		if (right == true)
+		{
+			graficox = MARGEN + CUTX;
+		}
+		if (left == true)
+		{
+			graficox = 7 * (CUTX + MARGEN);
+		}
 	}
-	}
-	if (down == true)
+	
+	else if (down == true)
 	{
 		graficox = (4* (CUTX + MARGEN));
+		if (left == true)
+		{
+			graficox = 5 * (CUTX + MARGEN);
+		}
+		if (right == true)
+		{
+			graficox = (3 * (CUTX + MARGEN));
+		}
 	}
-	if (left == true)
+	else if (right == true)
+	{
+		graficox = (2 * (CUTX + MARGEN));
+	
+	}
+	else if (left == true)
 	{
 		graficox = (6 * (CUTX + MARGEN));
+		
 	}
 
 	// situar las posiciones de los players
