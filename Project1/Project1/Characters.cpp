@@ -14,6 +14,9 @@ Characters::Characters()
 	down = false; 
 	left = false; 
 	right = false;
+	isIdle = false; 
+	timeToSwich = 3;
+	pointToControl = timeToSwich; 
 }
 
 
@@ -23,6 +26,19 @@ Characters::~Characters()
 
 void Characters::init()
 {
+	x = SCREEN_WIDTH / 2;
+	y = SCREEN_HEIGHT / 2;
+	graficox = 0;
+	speed = 6;
+	up = false;
+	down = false;
+	left = false;
+	right = false;
+	isIdle = false; 
+	timeToSwich = 3;
+	pointToControl = timeToSwich;
+
+
 }
 
 void Characters::update()
@@ -127,43 +143,120 @@ void Characters::setCharacterX()
 	
 	if (up == true)
 	{
-		graficox = 0;
+		if (!isIdle)
+		{
+			hazCalculos(8);
+		}
+		else {
+			hazCalculos(16);
+
+		}
 
 		if (right == true)
 		{
-			graficox = MARGEN + CUTX;
+			if (!isIdle)
+			{
+				hazCalculos(9);
+			}
+			else {
+				hazCalculos(17);
+
+			}
 		}
 		if (left == true)
 		{
-			graficox = 7 * (CUTX + MARGEN);
+			if (!isIdle)
+			{
+				hazCalculos(15);
+			}
+			else {
+				hazCalculos(23);
+
+			}
 		}
 	}
 	
 	else if (down == true)
 	{
-		graficox = (4* (CUTX + MARGEN));
+		if (!isIdle)
+		{
+			hazCalculos(12);
+		}
+		else {
+			hazCalculos(20);
+
+		}
 		if (left == true)
 		{
-			graficox = 5 * (CUTX + MARGEN);
+			if (!isIdle)
+			{
+				hazCalculos(12);
+			}
+			else {
+				hazCalculos(21);
+
+			}
 		}
 		if (right == true)
 		{
-			graficox = (3 * (CUTX + MARGEN));
+			if (!isIdle)
+			{
+				hazCalculos(11);
+			}
+			else {
+				hazCalculos(19);
+
+			}
 		}
 	}
 	else if (right == true)
 	{
-		graficox = (2 * (CUTX + MARGEN));
+		if (!isIdle)
+		{
+			hazCalculos(10);
+		}
+		else {
+			hazCalculos(18);
+
+		}
 	
 	}
 	else if (left == true)
 	{
-		graficox = (6 * (CUTX + MARGEN));
+		if (!isIdle)
+		{
+			hazCalculos(14);
+		}
+		else {
+			hazCalculos(22);
+
+		}
 		
 	}
 
 	// situar las posiciones de los players
 
+}
+
+void Characters::hazCalculos(int numero)
+{
+	graficox = numero * (MARGEN + CUTX);
+	if (timeToSwich <=0 )
+	{
+
+		if (isIdle)
+		{
+			isIdle = false;
+
+		}
+		else
+		{
+			isIdle = true;
+		}
+		timeToSwich = pointToControl;
+	}
+	timeToSwich -= 1;
+	
 }
 
 

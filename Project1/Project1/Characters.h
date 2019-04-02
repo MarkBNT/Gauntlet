@@ -1,5 +1,7 @@
 #pragma once
 //#include "Includes.h"
+#include<iostream>
+#include<vector>
 class Characters
 {
 public:
@@ -13,8 +15,10 @@ public:
 	virtual void setCharacterX(); 
 
 private: 
-	int x, y , graficox , graficoy,player ,speed; 
-	bool up, down, left, right; // son para controlar las variables que se usan 
+	int x, y , graficox , graficoy,player ,speed, timeToSwich , pointToControl; 
+	bool up, down, left, right, isIdle; // son para controlar las variables que se usan 
+
+	void hazCalculos(int numero);
 
 protected: 
 
