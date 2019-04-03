@@ -4,6 +4,8 @@
 #include "Inputs.h"
 #include "Defines.h"
 
+Bullet * bala = new Bullet();
+
 Characters::Characters()
 {
 	x = SCREEN_WIDTH / 2;
@@ -98,6 +100,10 @@ void Characters::update()
 	{
 		right = false; 
 	}
+	if (Inputs::getInstance()->space() == true)
+	{
+		Dispara(); 
+	}
 	setCharacterX();
 	
 	player = TypePlayerControler::getInstance()->getPlayer();
@@ -108,6 +114,8 @@ void Characters::render()
 	setCharacterY(player);
 	moove();
 }
+
+
 
 void Characters::moove()
 {
@@ -257,6 +265,65 @@ void Characters::hazCalculos(int numero)
 	}
 	timeToSwich -= 1;
 	
+}
+
+int Characters::getX()
+{
+	return x;
+}
+
+int Characters::getY()
+{
+	return y;
+}
+
+int Characters::getGY()
+{
+	return graficoy;
+}
+void Characters::Dispara()
+{
+/*	if (up == true)
+	{
+		std::cout << "Dispara arma up \n"; 
+		if (left == true)
+		{
+		std::cout << "Dispara arma horizontal left up \n"; 
+
+		}
+		if (right == true)
+		{
+
+		std::cout << "Dispara arma horizontal right up \n"; 
+		}
+	}
+	if (down == true)
+	{
+		std::cout << "Disparo Abajo \n";
+		if (left == true)
+		{
+			std::cout << "Dispara arma horizontal left down \n";
+
+		}
+		if (right == true)
+		{
+
+			std::cout << "Dispara arma horizontal right down \n";
+		}
+	}
+	if (left==true)
+	{
+		std::cout << "Disparo izquierda \n";
+
+	}
+	if (right == true)
+	{
+		std::cout << "Disparo a la derecha \n"; 
+	}
+
+	////crear una clase de bullet para poder disparar bien y no se puto buguee 
+
+	*/
 }
 
 

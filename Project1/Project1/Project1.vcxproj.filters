@@ -100,6 +100,12 @@
     <Filter Include="Source Files\GameThings\Base\Mobs\Player\PlayerType">
       <UniqueIdentifier>{49c90fe0-9c3b-45bc-bf49-04fe8c0460ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\GameThings\Base\Mobs\Player\Bullets">
+      <UniqueIdentifier>{325b7a73-e9a4-41a2-ad08-f21210f619cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Mobs\Player\Bullets">
+      <UniqueIdentifier>{dc7399d3-4651-4727-882e-f693b81b6f80}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Inputs.cpp">
@@ -144,12 +150,6 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Characters.cpp">
-      <Filter>Source Files\GameThings\Base\Mobs</Filter>
-    </ClCompile>
-    <ClCompile Include="TypePlayerControler.cpp">
-      <Filter>Source Files\GameThings\Base\Mobs\Player\TypePlayerControler</Filter>
-    </ClCompile>
     <ClCompile Include="Elfo.cpp">
       <Filter>Source Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
     </ClCompile>
@@ -161,6 +161,15 @@
     </ClCompile>
     <ClCompile Include="Valquiria.cpp">
       <Filter>Source Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
+    </ClCompile>
+    <ClCompile Include="Characters.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs\Player\TypePlayerControler</Filter>
+    </ClCompile>
+    <ClCompile Include="TypePlayerControler.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +235,9 @@
     </ClInclude>
     <ClInclude Include="Valquiria.h">
       <Filter>Header Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>Header Files\GameThings\Base\Mobs\Player\Bullets</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
