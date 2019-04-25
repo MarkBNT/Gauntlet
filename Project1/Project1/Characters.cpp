@@ -3,13 +3,15 @@
 //#include "Videos.h"
 #include "Inputs.h"
 #include "Defines.h"
+#include "Bullet.h"
 
-Bullet * bala = new Bullet();
+Bullet *bala = new Bullet(); 
 
 Characters::Characters()
 {
 	x = SCREEN_WIDTH / 2;
 	y = SCREEN_HEIGHT/2; 
+	graficoy = 0;
 	graficox = 0; 
 	speed = 6;
 	up = false; 
@@ -30,6 +32,7 @@ void Characters::init()
 {
 	x = SCREEN_WIDTH / 2;
 	y = SCREEN_HEIGHT / 2;
+	graficoy = 0;
 	graficox = 0;
 	speed = 6;
 	up = false;
@@ -103,6 +106,7 @@ void Characters::update()
 	if (Inputs::getInstance()->space() == true)
 	{
 		Dispara(); 
+		iShoot = true;
 	}
 	setCharacterX();
 	
@@ -112,7 +116,9 @@ void Characters::update()
 void Characters::render()
 {
 	setCharacterY(player);
+	
 	moove();
+	iShoot = false; 
 }
 
 
@@ -134,15 +140,15 @@ void Characters::setCharacterY(int Personaje)
 	}
 	else if (Personaje == 1)
 	{
-		graficoy = 29 + MARGEN;
+		graficoy = 29 + MARGEN*2;
 	}
 	else if (Personaje == 2)
 	{
-		graficoy = 58 + MARGEN;
+		graficoy = 58 + MARGEN*4;
 	} 
 	else
 	{
-		graficoy = 87 + MARGEN;
+		graficoy = 87 + MARGEN*8+MARGEN;
 	}
 }
 
@@ -283,6 +289,13 @@ int Characters::getGY()
 }
 void Characters::Dispara()
 {
+	bala->render();
+	
+
+}
+
+
+
 /*	if (up == true)
 	{
 		std::cout << "Dispara arma up \n"; 
@@ -324,8 +337,4 @@ void Characters::Dispara()
 	////crear una clase de bullet para poder disparar bien y no se puto buguee 
 
 	*/
-}
-
-
-
 

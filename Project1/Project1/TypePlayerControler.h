@@ -6,7 +6,7 @@ enum PlayerEnum { GERRERO, VALQUIRIA, MAGO, ELFO, _lastPlayer };
 #define NUM_PLAYERS _lastPlayer
 
 class TypePlayerControler :
-	public Characters
+	public mundo
 {
 public:
 	~TypePlayerControler();

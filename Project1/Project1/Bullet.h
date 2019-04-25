@@ -1,18 +1,22 @@
 #pragma once
-#include "Characters.h"
+#include "mundo.h"
+#include <vector>
 
-class Bullet
+class Bullet:
+	public mundo
 {
 public:
 	Bullet();
 	~Bullet();
-	void init(); 
-	void update();
+	void init();
+	void update(); 
 	void render(); 
+	void insertBullets(Bullet disparo); 
+	void setposition(int _x, int _y);
+
 private:
-	void getVariables();
-	int x, y, graficoX, graficoY;
-	
+	std::vector<Bullet * > balas; 
+	int x, y; 
 
 };
 

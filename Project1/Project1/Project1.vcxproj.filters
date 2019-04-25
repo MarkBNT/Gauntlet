@@ -34,9 +34,6 @@
     <Filter Include="Header Files\GameThings\Base\Mobs\Player">
       <UniqueIdentifier>{618f3e63-3e96-4b41-bbb0-45a7807833dd}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\GameThings\Base\Mobs\Player\TypePlayerControler">
-      <UniqueIdentifier>{e32d98c0-1aeb-4fd0-9a3f-8501705d2fe3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\GameThings\Base\Puntuacion">
       <UniqueIdentifier>{b7655c4e-e803-4e3b-a340-2f4d0426a099}</UniqueIdentifier>
     </Filter>
@@ -85,9 +82,6 @@
     <Filter Include="Source Files\GameThings\Base\Mobs\Player">
       <UniqueIdentifier>{f80ee750-3d5d-4ec3-9a4f-fc996c212239}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\GameThings\Base\Mobs\Player\TypePlayerControler">
-      <UniqueIdentifier>{beca318d-128b-4a3f-8273-8011112a3bb5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\GameThings\Base\Puntuacion">
       <UniqueIdentifier>{3c9e8a5a-7082-4761-9ae6-4a6f2c62c67f}</UniqueIdentifier>
     </Filter>
@@ -105,6 +99,18 @@
     </Filter>
     <Filter Include="Header Files\GameThings\Base\Mobs\Player\Bullets">
       <UniqueIdentifier>{dc7399d3-4651-4727-882e-f693b81b6f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Mobs\Player\PlayerType\TypePlayerControler">
+      <UniqueIdentifier>{beca318d-128b-4a3f-8273-8011112a3bb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Mobs\Player\PlayerType\TypePlayerControler">
+      <UniqueIdentifier>{e32d98c0-1aeb-4fd0-9a3f-8501705d2fe3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GameThings\Base\Mobs\Padre">
+      <UniqueIdentifier>{ae2f83fe-c2b8-433e-a633-dd2ef6f18a25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameThings\Base\Mobs\Player\Padre">
+      <UniqueIdentifier>{847e6151-b33c-422e-b006-dba2d46a1c09}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -162,14 +168,17 @@
     <ClCompile Include="Valquiria.cpp">
       <Filter>Source Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
     </ClCompile>
-    <ClCompile Include="Characters.cpp">
-      <Filter>Source Files\GameThings\Base\Mobs\Player\TypePlayerControler</Filter>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs\Player\Bullets</Filter>
     </ClCompile>
     <ClCompile Include="TypePlayerControler.cpp">
-      <Filter>Source Files\GameThings\Base\Mobs\Player</Filter>
+      <Filter>Source Files\GameThings\Base\Mobs\Player\PlayerType\TypePlayerControler</Filter>
     </ClCompile>
-    <ClCompile Include="Bullet.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Characters.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs\Player\PlayerType\TypePlayerControler</Filter>
+    </ClCompile>
+    <ClCompile Include="mundo.cpp">
+      <Filter>Source Files\GameThings\Base\Mobs\Player\Padre</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -218,11 +227,8 @@
     <ClInclude Include="PlayerSelector.h">
       <Filter>Header Files\GameThings\Base\Scenes\OtherScenes</Filter>
     </ClInclude>
-    <ClInclude Include="Characters.h">
-      <Filter>Header Files\GameThings\Base\Mobs</Filter>
-    </ClInclude>
     <ClInclude Include="TypePlayerControler.h">
-      <Filter>Header Files\GameThings\Base\Mobs\Player\TypePlayerControler</Filter>
+      <Filter>Header Files\GameThings\Base\Mobs\Player\PlayerType\TypePlayerControler</Filter>
     </ClInclude>
     <ClInclude Include="Elfo.h">
       <Filter>Header Files\GameThings\Base\Mobs\Player\PlayerType</Filter>
@@ -238,6 +244,12 @@
     </ClInclude>
     <ClInclude Include="Bullet.h">
       <Filter>Header Files\GameThings\Base\Mobs\Player\Bullets</Filter>
+    </ClInclude>
+    <ClInclude Include="Characters.h">
+      <Filter>Header Files\GameThings\Base\Mobs\Player\PlayerType\TypePlayerControler</Filter>
+    </ClInclude>
+    <ClInclude Include="mundo.h">
+      <Filter>Header Files\GameThings\Base\Mobs\Padre</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

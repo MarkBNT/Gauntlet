@@ -144,6 +144,7 @@
     <ClCompile Include="intro.cpp" />
     <ClCompile Include="Mago.cpp" />
     <ClCompile Include="MainScene.cpp" />
+    <ClCompile Include="mundo.cpp" />
     <ClCompile Include="OptionsScene.cpp" />
     <ClCompile Include="PlayerSelector.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="intro.h" />
     <ClInclude Include="Mago.h" />
     <ClInclude Include="MainScene.h" />
+    <ClInclude Include="mundo.h" />
     <ClInclude Include="OptionsScene.h" />
     <ClInclude Include="PlayerSelector.h" />
     <ClInclude Include="ResourceManager.h" />

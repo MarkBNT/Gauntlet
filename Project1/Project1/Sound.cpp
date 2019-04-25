@@ -17,14 +17,7 @@ Sound::Sound()
 void Sound::SetElements()
 {
 	sonido.push_back(Mix_LoadWAV("./Music/Gauntlet_Intro.wav")); 
-	/*sonido.push_back(Mix_LoadWAV("./Music/victory.wav"));
-	sonido.push_back(Mix_LoadWAV("./Music/death.wav"));
-	sonido.push_back(Mix_LoadWAV("./Music/gameover.wav"));
-	sonido.push_back(Mix_LoadWAV("./Music/Monster-Snoring.wav"));
-	sonido.push_back(Mix_LoadWAV("./Music/shock-wall.wav"));
-	sonido.push_back(Mix_LoadWAV("./Music/step-human.wav"));
-	sonido.push_back(Mix_LoadWAV("./Music/step-monster.wav"));
-	sonido.push_back(Mix_LoadWAV("./Music/waterfall.wav"));*/
+	
 }
 
 Sound * Sound::getInstance()

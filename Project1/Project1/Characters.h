@@ -1,34 +1,39 @@
 #pragma once
 //#include "Includes.h"
+#include "mundo.h"
 #include<iostream>
 #include<vector>
-#include "Bullet.h"
-class Characters
+//#include "Bullet.h"
+
+class Characters:
+	public mundo
 {
 public:
 	Characters();
-	virtual ~Characters();
-	virtual void init(); 
-	virtual void update(); 
-	virtual void render(); 
+	~Characters();
+	void init(); 
+	void update(); 
+	void render(); 
 	int getX();
 	int getY();	
 	int getGY();
+	void setCharacterX(); 
+	void setCharacterY(int Personaje); 
 
 
 private: 
+	//variables
 	int x, y , graficox , graficoy,player ,speed, timeToSwich , pointToControl; 
-	bool up, down, left, right, isIdle; // son para controlar las variables que se usan 
+	bool up, down, left, right, isIdle ,iShoot; // son para controlar las variables que se usan 
 	virtual void moove();
-
-	virtual void setCharacterX(); 
+	//std::vector<Bullet *> balitas;
+	//fvariables; 
 	void hazCalculos(int numero);
 	void Dispara();
 	
 
 protected: 
 
-	virtual void setCharacterY(int Personaje); 
 
 
 	//virtual void setVariables(int graphicX, int graphicY);

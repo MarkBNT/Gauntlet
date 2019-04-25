@@ -1,10 +1,11 @@
 #include "Bullet.h"
-Characters * personaje = new Characters();
+#include "Videos.h"
+#include "Defines.h"
 
 
 Bullet::Bullet()
 {
-	
+
 }
 
 
@@ -14,20 +15,29 @@ Bullet::~Bullet()
 
 void Bullet::init()
 {
-	x = 0; 
-	y = 0; 
-	graficoX = 0; 
-	graficoY = 0; 
-	
+
 }
 
 void Bullet::update()
 {
-	graficoY = personaje->getGY();
-	x = personaje->getX();
-	y = personaje->getY();
 }
 
 void Bullet::render()
 {
+	Videos::getInstance()->drawPlayer("./Graphics/entities.png", 0, 0, 0, 0);
 }
+
+void Bullet::insertBullets(Bullet disparo)
+{
+	balas.push_back(&disparo);
+}
+
+void Bullet::setposition(int _x, int _y)
+{
+	x = _x;
+	y = _y;
+}
+
+
+
+

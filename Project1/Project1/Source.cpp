@@ -3,8 +3,8 @@
 int main(int archc, char* rgs[])
 {
 
-	Inputs *Teclas = Inputs::getInstance();// half  Completed
-	Videos *Video = Videos::getInstance();// half completed
+	Inputs *Teclas = Inputs::getInstance();//  Completed
+	Videos *Video = Videos::getInstance();//  completed
 	Sound *Sonido = Sound::getInstance();//completed 
 	SceneDirector *Escenas = SceneDirector::getInstance();
 	
