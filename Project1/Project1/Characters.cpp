@@ -3,12 +3,13 @@
 //#include "Videos.h"
 #include "Inputs.h"
 #include "Defines.h"
-#include "Bullet.h"
 
-Bullet *bala = new Bullet(); 
+
+
 
 Characters::Characters()
 {
+	firstTime = true; 
 	x = SCREEN_WIDTH / 2;
 	y = SCREEN_HEIGHT/2; 
 	graficoy = 0;
@@ -20,7 +21,11 @@ Characters::Characters()
 	right = false;
 	isIdle = false; 
 	timeToSwich = 3;
-	pointToControl = timeToSwich; 
+	pointToControl = timeToSwich;
+
+
+
+	
 }
 
 
@@ -42,7 +47,7 @@ void Characters::init()
 	isIdle = false; 
 	timeToSwich = 3;
 	pointToControl = timeToSwich;
-
+	
 
 }
 
@@ -107,6 +112,15 @@ void Characters::update()
 	{
 		Dispara(); 
 		iShoot = true;
+		for (int i = 0; i < balitas.size(); i++)
+		{
+			if (!balitas[i]->vectBalitas())
+			{
+				balitas[i]->setActive(true); 
+			}
+		}
+
+		std::cout << "He disparado en posicion = " << x << " , " << y << " , " << graficox << " , " << graficoy << "\n "   ;
 	}
 	setCharacterX();
 	
@@ -134,22 +148,38 @@ void Characters::moove()
 
 void Characters::setCharacterY(int Personaje)
 {
+	
 	if (Personaje == 0 )
 	{
 		graficoy = 0; 
 	}
 	else if (Personaje == 1)
 	{
-		graficoy = 29 + MARGEN*2;
+		graficoy = 32 + (MARGEN*2);
 	}
 	else if (Personaje == 2)
 	{
-		graficoy = 58 + MARGEN*4;
+		graficoy = 64 + (MARGEN*4);
 	} 
 	else
 	{
-		graficoy = 87 + MARGEN*8+MARGEN;
+		graficoy = 96 + (MARGEN*8);
 	}
+	if (firstTime)
+	{
+		int numero = 25 * (MARGEN + CUTX);
+		for (int i = 0; i < 25; i++)
+		{
+			Bullet *bala = new Bullet();
+			bala->setTypeOfBullet(numero, graficoy);
+			balitas.push_back(bala);
+			delete bala;
+		}
+		firstTime = false; 
+	}
+	
+
+	
 }
 
 void Characters::setCharacterX()
@@ -289,7 +319,6 @@ int Characters::getGY()
 }
 void Characters::Dispara()
 {
-	bala->render();
 	
 
 }

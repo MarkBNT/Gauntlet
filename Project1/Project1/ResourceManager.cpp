@@ -45,14 +45,14 @@ Uint32 ResourceManager::addTexture(const char* path)
 	if (mFirstFreeSlot < _vectorDeTexturas.size())
 	{
 		Uint32 id = mFirstFreeSlot; 
-		mFirstFreeSlot = _vectorDeTexturas.size();
+		mFirstFreeSlot = static_cast< Uint32>(_vectorDeTexturas.size());
 		_vectorDeTexturas[id] = texturaCargada; 
 		return id; 
 	}
 	else
 	{
 		_vectorDeTexturas.push_back(texturaCargada); 
-		mFirstFreeSlot = _vectorDeTexturas.size(); 
+		mFirstFreeSlot = static_cast<Uint32>(_vectorDeTexturas.size());
 
 		return  mFirstFreeSlot - 1; 
 	}

@@ -3,7 +3,7 @@
 #include "mundo.h"
 #include<iostream>
 #include<vector>
-//#include "Bullet.h"
+#include "Bullet.h"
 
 class Characters:
 	public mundo
@@ -24,9 +24,9 @@ public:
 private: 
 	//variables
 	int x, y , graficox , graficoy,player ,speed, timeToSwich , pointToControl; 
-	bool up, down, left, right, isIdle ,iShoot; // son para controlar las variables que se usan 
+	bool up, down, left, right, isIdle ,iShoot , firstTime; // son para controlar las variables que se usan 
 	virtual void moove();
-	//std::vector<Bullet *> balitas;
+	std::vector<Bullet *> balitas;
 	//fvariables; 
 	void hazCalculos(int numero);
 	void Dispara();

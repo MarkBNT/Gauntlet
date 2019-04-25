@@ -117,17 +117,10 @@ void Videos::Draw(const char * path, int w, int h, int x, int y)
 	destination.x = x;
 	destination.y = y;
 
-	
-
-
 
 	SDL_Texture * LoadedTexure = Gestor->getTextureByID(Gestor->getTextureId(path));
 	SDL_RenderCopy(renderer, LoadedTexure, src, &destination);
 
-
-
-	//update(); 
-	//update(); 
 
 }
 
