@@ -23,12 +23,13 @@ public:
 
 private: 
 	//variables
-	int x, y , graficox , graficoy,player ,speed, timeToSwich , pointToControl; 
-	bool up, down, left, right, isIdle ,iShoot , firstTime; // son para controlar las variables que se usan 
+	int x, y , graficox , graficoy,player ,speed, timeToSwich , pointToControl , armaX , direct; 
+	bool up, down, left, right, isIdle ,iShoot , firstTime, pasado; // son para controlar las variables que se usan 
 	virtual void moove();
-	std::vector<Bullet *> balitas;
+	std::vector<Bullet*> balitas;
 	//fvariables; 
 	void hazCalculos(int numero);
+	void CalculosDeArma();
 	void Dispara();
 	
 

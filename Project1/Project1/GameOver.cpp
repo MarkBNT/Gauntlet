@@ -15,3 +15,11 @@ void GameOver::init()
 {
 	std::cout << "Has Muerto" << std::endl;
 }
+
+void GameOver::update()
+{
+}
+
+void GameOver::render()
+{
+}

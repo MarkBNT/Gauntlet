@@ -14,6 +14,7 @@ Characters::Characters()
 	y = SCREEN_HEIGHT/2; 
 	graficoy = 0;
 	graficox = 0; 
+	armaX = 0;
 	speed = 6;
 	up = false; 
 	down = false; 
@@ -39,6 +40,7 @@ void Characters::init()
 	y = SCREEN_HEIGHT / 2;
 	graficoy = 0;
 	graficox = 0;
+	armaX = 0;
 	speed = 6;
 	up = false;
 	down = false;
@@ -47,6 +49,8 @@ void Characters::init()
 	isIdle = false; 
 	timeToSwich = 3;
 	pointToControl = timeToSwich;
+	direct = 0; 
+	balitas.resize(0);
 	
 
 }
@@ -58,6 +62,7 @@ void Characters::update()
 	if ((Inputs::getInstance()->wKey() == true) || (Inputs::getInstance()->up() == true))
 	{
 		y-= speed; 
+		direct += 1;
 		if (y < 0)
 		{
 			y = 0;
@@ -71,6 +76,7 @@ void Characters::update()
 	if ((Inputs::getInstance()->sKey() == true)||(Inputs::getInstance()->down() == true))
 	{
 		y += speed; 
+		direct += 2;
 		if (y >( SCREEN_HEIGHT - CUTY))
 		{
 			y = SCREEN_HEIGHT - CUTY;
@@ -84,6 +90,7 @@ void Characters::update()
 	if ((Inputs::getInstance()->aKey() == true)||(Inputs::getInstance()->left() == true))
 	{ 
 		x -= speed;
+		direct += 10;
 		if (x < 0)
 		{
 			x = 0; 
@@ -98,6 +105,7 @@ void Characters::update()
 	if ((Inputs::getInstance()->dKey() == true)||(Inputs::getInstance()->right() == true))
 	{
 		x += speed; 
+		direct += 20;
 		if (x > (SCREEN_WIDTH  - CUTX))
 		{
 			x = SCREEN_WIDTH - CUTX;
@@ -110,17 +118,30 @@ void Characters::update()
 	}
 	if (Inputs::getInstance()->space() == true)
 	{
-		Dispara(); 
+
+		/*Dispara();*/ 
 		iShoot = true;
+		
 		for (int i = 0; i < balitas.size(); i++)
 		{
-			if (!balitas[i]->vectBalitas())
+			if (balitas[i]->vectBalitas() == false)
 			{
-				balitas[i]->setActive(true); 
+				CalculosDeArma();
+				balitas[i]->setActive(true);
+				balitas[i]->setposition(x, y);
+				balitas[i]->setTypeOfBullet(armaX, graficoy);
+				balitas[i]->setDirectionOfBullet(direct);
+				//std::cout << balitas[i];
+				std::cout << "Bala" << i << std::endl;
+				pasado = true; 
+				std::cout << "He disparado en posicion = " << x << " , " << y << " , " << graficox << " , " << graficoy << "\n "   ;
+			}
+			if (pasado == true)
+			{
+				break; 
 			}
 		}
-
-		std::cout << "He disparado en posicion = " << x << " , " << y << " , " << graficox << " , " << graficoy << "\n "   ;
+		pasado = false; 
 	}
 	setCharacterX();
 	
@@ -133,13 +154,21 @@ void Characters::render()
 	
 	moove();
 	iShoot = false; 
+	direct = 0;
 }
 
 
 
 void Characters::moove()
 {
-	
+	for (int i = 0; i < balitas.size(); i++)
+	{
+		if (balitas[i]->vectBalitas() == true)
+		{
+			balitas[i]->movimientosDelArma();
+			balitas[i]->render();
+		}
+	}
 	Videos::getInstance()->drawPlayer("./Graphics/entities.png", x, y, graficox, graficoy);
 
 
@@ -173,8 +202,9 @@ void Characters::setCharacterY(int Personaje)
 			Bullet *bala = new Bullet();
 			bala->setTypeOfBullet(numero, graficoy);
 			balitas.push_back(bala);
-			delete bala;
-		}
+			
+			
+		}	
 		firstTime = false; 
 	}
 	
@@ -301,6 +331,11 @@ void Characters::hazCalculos(int numero)
 	}
 	timeToSwich -= 1;
 	
+}
+
+void Characters::CalculosDeArma()
+{
+	armaX = 24 * (MARGEN + CUTX);
 }
 
 int Characters::getX()

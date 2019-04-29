@@ -8,5 +8,9 @@ public:
 	GameOver();
 	~GameOver();
 	void init();
+	void update(); 
+	void render(); 
+	
+
 };
 
