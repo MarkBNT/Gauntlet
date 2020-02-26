@@ -20,6 +20,7 @@ int main(int archc, char* rgs[])
 	while (!Quit)
 	{
 		Teclas->capturaTeclas();
+
 		Escenas->update(Escenas->getCurrentSceneEnum());
 		
 		
